@@ -165,3 +165,174 @@ left:0;
 }
 .tips p, .chat-section p { line-height: 1.7; }
 .chat-btn { display: inline-block; margin-top: 22px; }
+/* Новый тайминг */
+
+.program {
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.program-title {
+  margin-bottom: 45px !important;
+  font-size: 38px !important;
+  letter-spacing: .12em !important;
+}
+
+.timeline-modern {
+  position: relative;
+  padding: 10px 0 10px 72px;
+  text-align: left;
+}
+
+/* Вертикальная линия */
+
+.timeline-modern::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 36px;
+  width: 2px;
+  background: rgba(255, 255, 255, .85);
+  box-shadow: 0 0 12px rgba(255, 255, 255, .35);
+}
+
+/* Круг сверху и снизу */
+
+.timeline-modern::after {
+  content: "";
+  position: absolute;
+  left: 28px;
+  bottom: -7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f8f3eb;
+  box-shadow: 0 0 12px rgba(255, 255, 255, .5);
+}
+
+.timeline-event:first-child::before {
+  content: "";
+  position: absolute;
+  left: -44px;
+  top: -7px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background: #f8f3eb;
+  box-shadow: 0 0 12px rgba(255, 255, 255, .5);
+  z-index: 3;
+}
+
+.timeline-event {
+  position: relative;
+  display: grid;
+  grid-template-columns: 82px minmax(0, 1fr);
+  gap: 24px;
+  align-items: center;
+  min-height: 175px;
+  margin-bottom: 15px;
+}
+
+/* Круглая фотография */
+
+.timeline-photo {
+  position: relative;
+  width: 82px;
+  height: 82px;
+  margin-left: -77px;
+  z-index: 2;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 2px solid rgba(255, 255, 255, .85);
+  background: #ddd2c4;
+  box-shadow: 0 8px 25px rgba(45, 35, 28, .22);
+}
+
+.timeline-photo img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Текст */
+
+.timeline-content {
+  min-width: 0;
+  padding: 10px 0;
+}
+
+.timeline-content b {
+  display: block;
+  margin-bottom: 7px;
+  padding: 0;
+  border: 0;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 35px;
+  font-weight: 400;
+  line-height: 1;
+  color: #49382f;
+}
+
+.timeline-content h3 {
+  margin: 0 0 9px;
+  font-family: "Cormorant Garamond", serif;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.15;
+  color: #49382f;
+  text-transform: none;
+}
+
+.timeline-content p {
+  margin: 0;
+  padding: 0;
+  font-size: 13px;
+  line-height: 1.65;
+  color: #74665c;
+}
+
+/* Телефон */
+
+@media (max-width: 390px) {
+  .timeline-modern {
+    padding-left: 62px;
+  }
+
+  .timeline-modern::before {
+    left: 31px;
+  }
+
+  .timeline-modern::after {
+    left: 23px;
+  }
+
+  .timeline-event {
+    grid-template-columns: 68px minmax(0, 1fr);
+    gap: 18px;
+    min-height: 165px;
+  }
+
+  .timeline-event:first-child::before {
+    left: -39px;
+  }
+
+  .timeline-photo {
+    width: 68px;
+    height: 68px;
+    margin-left: -67px;
+  }
+
+  .timeline-content b {
+    font-size: 31px;
+  }
+
+  .timeline-content h3 {
+    font-size: 21px;
+  }
+
+  .timeline-content p {
+    font-size: 12px;
+  }
+}
