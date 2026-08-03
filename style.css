@@ -336,3 +336,26 @@ left:0;
     font-size: 12px;
   }
 }
+.dress-colors{
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:16px;
+    margin-top:28px;
+}
+
+.dress-colors span{
+    width:56px;
+    height:56px;
+    border-radius:50%;
+    border:2px solid rgba(255,255,255,.9);
+    box-shadow:
+        0 6px 16px rgba(0,0,0,.15),
+        inset 0 2px 5px rgba(255,255,255,.35);
+    transition:.25s;
+    cursor:default;
+}
+
+.dress-colors span:hover{
+    transform:translateY(-3px) scale(1.06);
+}
